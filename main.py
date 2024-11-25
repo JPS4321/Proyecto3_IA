@@ -24,8 +24,8 @@ def main():
     st.markdown("### Selección de tareas predefinidas")
     tasks = [
         "¿Cuál es el juego más vendido de Nintendo Switch?",
-        "¿Cuál es el juego más vendido de PlayStation 4?",
-        "¿Cuál es el juego más vendido de Xbox One?"
+        "¿Cuál es el juego más vendido a nivel global de PlayStation 4?",
+        "¿Cuál es el juego más vendido a nivel global de Xbox One?"
     ]
     selected_task = st.selectbox("Selecciona una tarea:", tasks)
 
@@ -69,9 +69,9 @@ def process_predefined_task(task):
     # Asignar el agente adecuado según la tarea seleccionada
     if task == "¿Cuál es el juego más vendido de Nintendo Switch?":
         agent = switch_agent
-    elif task == "¿Cuál es el juego más vendido de PlayStation 4?":
+    elif task == "¿Cuál es el juego más vendido a nivel global de PlayStation 4?":
         agent = ps4_agent
-    elif task == "¿Cuál es el juego más vendido de Xbox One?":
+    elif task == "¿Cuál es el juego más vendido a nivel global de Xbox One?":
         agent = xbox_agent
     else:
         st.error("Tarea no reconocida.")
